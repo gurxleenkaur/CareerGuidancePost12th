@@ -52,4 +52,4 @@ joblib.dump(model_counsel, "saved_models/model_counsel.pkl")
 joblib.dump(model_jobrole, "saved_models/model_jobrole.pkl")
 joblib.dump(label_encoders, "saved_models/label_encoders.pkl")
 
-print("✅ Models and label encoders have been saved to 'saved_models/' folder.")
+print("Models and label encoders have been saved to 'saved_models/' folder.")
