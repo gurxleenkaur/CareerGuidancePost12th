@@ -70,14 +70,14 @@ def tab2_content():
     # Group and sort by average 12th percentage
     avg_target_job = df.groupby("Target_Job_Role")["12th_Percentage"].mean().sort_values(ascending=False).reset_index()
 
-    # Plot a single joined line (no color per category)
+    # Plot a single joined line 
     fig = px.line(
         avg_target_job,
         x="Target_Job_Role",
         y="12th_Percentage",
         markers=True,
         title="🎯 Average 12th Percentage vs Target Job Role",
-        color_discrete_sequence=["#FF6347"]  # A vibrant single color (tomato)
+        color_discrete_sequence=["#FF6347"]  
     )
 
     # Layout adjustments
@@ -137,16 +137,16 @@ def tab4_content():
         y="Aptitude_Test_Score",
         color="Interest_Domain",
         size="Maths_Score",
-        text="12th_Percentage",  # Show percentage inside bubble
+        text="12th_Percentage", 
         title="🎯 Aptitude vs Percentage (with Maths Score Bubble Size)",
         color_discrete_sequence=px.colors.qualitative.Bold
     )
 
     fig.update_traces(
-        textposition='middle center',  # Label at center
+        textposition='middle center', 
         marker=dict(
-            opacity=0.6,  # Lower opacity for transparency
-            line=dict(width=1.5, color='black')  # Outer border
+            opacity=0.6,  
+            line=dict(width=1.5, color='black')  
         )
     )
 
@@ -182,7 +182,7 @@ def tab6_content():
     fig = px.histogram(
         filtered_df,
         x=col,
-        color="Interest_Domain",  # Show distribution by domain
+        color="Interest_Domain",  
         nbins=20,
         title=f"{col} Distribution for {stream_choice} by Career Domain",
         color_discrete_sequence=px.colors.qualitative.Bold
@@ -302,7 +302,7 @@ def tab7_content():
         st.warning(f"👩‍🏫 **Counselor Recommendation:** {predicted_counsel}")
         st.success(f"🧭 **Predicted Target Job Role:** {predicted_jobrole}")
 
-# ============== TAB 8: Donut Charts ==================
+# Donut Charts
 def tab8_content():
     st.subheader("🍩 Stream-wise Career Interest Donuts")
 
