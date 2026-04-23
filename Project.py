@@ -20,13 +20,13 @@ st.title("🎓 Career Advisory Predictor (Post-12th)")
 st.markdown("## 🖨️ Export as PDF")
 show_all = st.checkbox("Show All Sections for PDF Export", value=False)
 
-# ================= Tabs =====================
+#Tabs 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
     "📊 Bar Chart", "📈 Line Chart", "🌞 Sunburst", "🔘 Scatter",
     "📌 Heatmap", "📚 Histogram", "🎯 Predictor", "🍩 Donut Chart", "🧠 Extra Advisory Details" ," 📅Application Tracker Form"
 ])
 
-# ============== TAB 1: Bar Chart ==================
+# Bar Chart
 def tab1_content():
     st.subheader("📈 Aptitude Score vs Target Career")
 
@@ -63,7 +63,7 @@ def tab1_content():
 
     st.plotly_chart(fig, use_container_width=True)
 
-# ============== TAB 2: Line Chart ==================
+#Line Chart
 def tab2_content():
     st.subheader("📈 Average 12th Percentage by Target Job Role")
 
@@ -93,7 +93,7 @@ def tab2_content():
     # Display in Streamlit
     st.plotly_chart(fig, use_container_width=True)
 
-# ============== TAB 3: Sunburst ==================
+# Sunburst
 def tab3_content():
     st.subheader("🌞 Stream → Career Interest → Target Job Role Breakdown")
 
@@ -127,7 +127,7 @@ def tab3_content():
     except Exception as e:
         st.error(f"Error generating sunburst: {e}")
 
-# ============== TAB 4: Scatter Plot ==================
+#Scatter Plot
 def tab4_content():
     st.subheader("🔘 Aptitude vs Percentage by Interest Domain")
 
@@ -158,7 +158,7 @@ def tab4_content():
 
     st.plotly_chart(fig, use_container_width=True)
 
-# ============== TAB 5: Heatmap ==================
+#Heatmap
 def tab5_content():
     st.subheader("📌 Correlation Heatmap")
     numeric_df = df.select_dtypes(include='number')
@@ -167,7 +167,7 @@ def tab5_content():
     sns.heatmap(corr, annot=True, cmap="Spectral", fmt=".2f", ax=ax)
     st.pyplot(fig)
 
-# ============== TAB 6: Histogram ==================
+# Histogram 
 def tab6_content():
     st.subheader("📚 Score Distribution by Career Domain")
 
@@ -198,7 +198,7 @@ def tab6_content():
 
     st.plotly_chart(fig, use_container_width=True)
 
-# ============== TAB 7: ML Predictor ==================
+#ML Predictor
 def tab7_content():
     st.subheader("🎯 Career & College & Job Role Predictor")
 
@@ -318,7 +318,7 @@ def tab8_content():
         )
         st.plotly_chart(fig, use_container_width=True)
         
-# ============== TAB 9: Extra Advisory Details ==================
+# Extra Advisory Details 
 def tab9_content():
     st.subheader("🧾 Advanced Career Expansion Form")
     with st.form("expansion_form"):
@@ -356,7 +356,7 @@ def tab9_content():
         st.info("📌 Personalized Guidance: Based on your academic, psychological and industry preferences, consider hybrid academic paths or interdisciplinary programs aligned with your goals. For in-depth analysis, reach out to a certified career counselor.")
         st.balloons()
         
-# ========== TAB 10: 📅 Application Tracker ==========
+#  Application Tracker
 def tab10_content():
     st.subheader("📅 Application Tracker")
 
@@ -408,7 +408,7 @@ def tab10_content():
         st.info("No applications added yet. Fill the form above to get started.")
 
 
-# --- Show all sections or use tabs ---
+# Show all sections or use tabs 
 if show_all:
     st.markdown("""
     <script>
