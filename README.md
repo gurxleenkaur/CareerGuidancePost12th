@@ -113,13 +113,14 @@ Add screenshots here after uploading them.
 Example:
 
 ```
-Home Page
+Home Page <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8d35960b-8015-4212-b397-7a1a165751d4" />
 
-Prediction Page
 
-Dashboard
+Prediction Page   <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/909f814f-2345-41dc-9f5e-842819e05851" />
 
-Graphs
+
+Graphs    <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/670acc52-2040-43fa-8e03-150e2ec83b98" />
+
 ```
 
 ---
